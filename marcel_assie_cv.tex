@@ -1,0 +1,133 @@
+\documentclass[11pt, a4paper]{article}
+
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[left=1.5cm, right=1.5cm, top=1.5cm, bottom=1.5cm]{geometry}
+% \usepackage{fontawesome5} % Pour les icônes (temporarily disabled)
+\usepackage{hyperref}     % Pour les liens cliquables
+\usepackage{titlesec}     % Pour personnaliser les titres de section
+\usepackage{enumitem}     % Pour personnaliser les listes
+\usepackage{parskip}      % Pour espacer les paragraphes
+\usepackage{xcolor}
+
+% --- Configuration des couleurs et liens ---
+\definecolor{linkcolor}{rgb}{0.0, 0.0, 0.5} % Bleu sombre et pro pour les liens
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor
+}
+
+% --- Configuration des titres de sections ---
+\titleformat{\section}{\large\scshape\raggedright\bfseries}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{5pt}
+
+% --- Commandes personnalisées pour le CV ---
+% Commande pour une entrée classique (Expérience / Formation)
+\newcommand{\cventry}[4]{
+    \vspace{0.15cm}
+    \noindent \textbf{#1} \hfill #2 \\
+    \noindent \textit{#3} \hfill \textit{#4} \par
+    \vspace{0.1cm}
+}
+
+\begin{document}
+\pagestyle{empty} % Pas de numéro de page
+
+% ================= EN-TÊTE =================
+\begin{center}
+    {\Huge \textbf{Marcel ASSIE}} \\[0.2cm]
+    {\Large \textsc{Ingénierie Géomatique}} \\[0.3cm]
+    \small
+    Tel: 07 68 06 25 78 \quad|\quad
+    Email: \href{mailto:marcelassie2k@gmail.com}{marcelassie2k@gmail.com} \quad|\quad
+    LinkedIn: \href{https://www.linkedin.com/in/marcel-assie/}{LinkedIn} \quad|\quad
+    GitHub: \href{https://github.com/MarcelAssie/}{GitHub} \\[0.15cm]
+    Web: \href{https://marcel-assie-portefolio.dev}{marcel-assie-portefolio.dev} \quad|\quad
+    Location: Champs-sur-Marne (77), France
+\end{center}
+
+\vspace{0.3cm}
+\noindent À la recherche d’une opportunité en \textbf{CDI} pour mettre à profit mes compétences en développement géospatial, analyse de données spatiales et automatisation, \textbf{au service de projets data} à fort impact.
+
+% ================= FORMATIONS =================
+\section*{Formations}
+
+\cventry{École Nationale des Sciences Géographiques (Geodata Paris)}{Champs-sur-Marne, France}{Ingénierie Géomatique}{2023 -- 2026}
+\cventry{Institut National Polytechnique Félix Houphouët-Boigny}{Yamoussoukro, Côte d'Ivoire}{Licence Géomètre}{2019 -- 2022}
+\cventry{Lycée Scientifique de Yamoussoukro}{Yamoussoukro, Côte d'Ivoire}{Baccalauréat, Série Scientifique}{2016 -- 2019}
+
+% ================= EXPÉRIENCES PROFESSIONNELLES =================
+\section*{Expériences Professionnelles}
+
+\cventry{ISOGEO}{Paris, France}{Ingénieur Développeur SIG -- Alternance}{Depuis Sept. 2025}
+\begin{itemize}[leftmargin=0.5cm, nosep]
+    \item Remplacement et optimisation de flux FME par des solutions alternatives (Python, SQL).
+    \item Développement de scripts d’automatisation pour l’extraction et la signature de métadonnées (Python).
+    \item Étude et intégration de modèles d’IA pour l’enrichissement automatique de métadonnées.
+    \item Rédaction de spécifications techniques et contribution aux développements en méthodologie Agile.
+\end{itemize}
+
+\cventry{ORYJIN}{Lille, France}{Ingénieur Geo Data Scientist -- Stage}{Avril 2025 -- Août 2025}
+\begin{itemize}[leftmargin=0.5cm, nosep]
+    \item Développement de pipelines ETL (Extract, Transform, Load) pour la préparation et l’agrégation de données (Python).
+    \item Automatisation de l’intégration des données dans un référentiel spatial basé sur H3 (Python, Snowflake, SQL).
+    \item Mise en place d’algorithmes d’analyse de photographies aériennes à l’aide de modèles d’IA (Python).
+    \item Prompt engineering pour la génération de visuels d’aide à la décision.
+\end{itemize}
+
+\cventry{IGN}{Forcalquier, France}{Ingénieur Géomaticien -- Stage}{Mai 2024 -- Juillet 2024}
+\begin{itemize}[leftmargin=0.5cm, nosep]
+    \item Mini projets appliqués en topométrie, photogrammétrie, métrologie (auscultation de pont), télédétection et géodésie, avec formalisation méthodologique et analyse des incertitudes.
+    \item Conception d’un workflow automatisé de cartographie des restrictions de circulation (Alpes-de-Haute-Provence) :
+    \begin{itemize}[leftmargin=0.5cm, nosep]
+        \item Structuration et nettoyage de jeux de données multi-sources.
+        \item Modélisation des traitements géospatiaux (QGIS Model Builder).
+        \item Développement d’algorithmes de contrôle qualité et de validation des données.
+    \end{itemize}
+\end{itemize}
+
+% ================= COMPÉTENCES =================
+\section*{Compétences}
+\noindent \textbf{Informatique / Programmation :} Python, JavaScript, PHP, SQL \\
+\textbf{Technologies \& Outils :} Docker, GitHub, PostgreSQL, PostGIS, MySQL, Django, Flask, Vue.js, React Native, Neo4j \\
+\textbf{Outils SIG :} QGIS, ArcGIS, FME, GeoServer, Leaflet \\
+\textbf{Aptitudes professionnelles :} Forte capacité d’adaptation, Rigueur, Esprit critique et d'analyse, Prise d’initiative
+
+% ================= PROJETS =================
+\section*{Projets}
+
+\noindent \textbf{Projets Académiques}
+\begin{itemize}[leftmargin=0.5cm, nosep]
+    \item \textbf{Extraction de données contextuelles (ODD)} : Utilisation de LLM et graphes de connaissances (Python, NLP, Jupyter, Neo4j, Cypher, modèles d’IA).
+    \item \textbf{App mobile de navigation (Gendarmerie Nationale)} : Application de type Waze (React Native, SQL, JS, Flask).
+    \item \textbf{Étude Spatio-Statistique (Île-de-France)} : Analyse des flux domicile-travail et déterminants du choix modal (Statistiques, Machine Learning, Analyse spatiale).
+\end{itemize}
+
+\vspace{0.2cm}
+\noindent \textbf{Projets Personnels}
+\begin{itemize}[leftmargin=0.5cm, nosep]
+    \item \textbf{Plateforme SaaS KlassIvoire} : Contribution au développement pour le suivi scolaire numérique, avec intégration d’outils d'IA pour l'analyse des performances (Django, Vue.js, Leaflet, SQL).
+    \item \textbf{Plateforme d'analyse d'établissements scolaires} : Conception d’une plateforme intelligente de suivi géographique permettant l’exploitation de données spatiales pour la prise de décision.
+\end{itemize}
+
+% ================= VIE ASSOCIATIVE =================
+\section*{Vie Associative}
+
+\cventry{VERTIGEO -- Junior Entreprise de l'ENSG Géomatique}{Champs-sur-Marne}{Secrétaire Général}{Fév. 2024 -- Mars 2025}
+\noindent Comptes rendus, archivage, gestion des relations avec les partenaires administratifs, organisation de réunions.
+
+\cventry{Professeur particulier}{}{Cours à domicile -- Mathématiques et Physique}{Depuis Oct. 2023}
+\noindent Pédagogie et méthodologie, écoute attentive des besoins des élèves.
+
+\cventry{Épicerie solidaire campésienne}{}{Bénévole}{Fév. 2024}
+\noindent Collecte de produits alimentaires et d'hygiène à Carrefour. Promotion de l'échange et de l'ouverture d'esprit.
+
+% ================= LANGUES ET INTÉRÊTS =================
+\section*{Langues et Centres d'intérêt}
+\noindent \textbf{Langues :} Français (Langue maternelle), Anglais (TOEIC - B2) \\[0.1cm]
+\textbf{Centres d'intérêt :} Intelligence Artificielle, Veille technologique, Football, Gymnastique acrobatique, Jeux de société
+
+\end{document}
