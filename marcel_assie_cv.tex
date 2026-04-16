@@ -3,9 +3,9 @@
 % --- Packages ---
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage[french]{babel}
 \usepackage[left=1.5cm, right=1.5cm, top=1.5cm, bottom=1.5cm]{geometry}
-% \usepackage{fontawesome5} % Pour les icônes (temporarily disabled)
 \usepackage{hyperref}     % Pour les liens cliquables
 \usepackage{titlesec}     % Pour personnaliser les titres de section
 \usepackage{enumitem}     % Pour personnaliser les listes
@@ -21,16 +21,16 @@
 }
 
 % --- Configuration des titres de sections ---
-\titleformat{\section}{\large\scshape\raggedright\bfseries}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{5pt}
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{12pt}{6pt}
 
 % --- Commandes personnalisées pour le CV ---
 % Commande pour une entrée classique (Expérience / Formation)
 \newcommand{\cventry}[4]{
-    \vspace{0.15cm}
+    \vspace{0.2cm}
     \noindent \textbf{#1} \hfill #2 \\
     \noindent \textit{#3} \hfill \textit{#4} \par
-    \vspace{0.1cm}
+    \vspace{0.12cm}
 }
 
 \begin{document}
@@ -41,12 +41,16 @@
     {\Huge \textbf{Marcel ASSIE}} \\[0.2cm]
     {\Large \textsc{Ingénierie Géomatique}} \\[0.3cm]
     \small
-    Tel: 07 68 06 25 78 \quad|\quad
-    Email: \href{mailto:marcelassie2k@gmail.com}{marcelassie2k@gmail.com} \quad|\quad
-    LinkedIn: \href{https://www.linkedin.com/in/marcel-assie/}{LinkedIn} \quad|\quad
-    GitHub: \href{https://github.com/MarcelAssie/}{GitHub} \\[0.15cm]
-    Web: \href{https://marcel-assie-portefolio.dev}{marcel-assie-portefolio.dev} \quad|\quad
-    Location: Champs-sur-Marne (77), France
+    Tel : 07 68 06 25 78
+    \quad|\quad
+    \href{mailto:marcelassie2k@gmail.com}{marcelassie2k@gmail.com}
+    \quad|\quad
+    \href{https://www.linkedin.com/in/marcel-assie/}{LinkedIn}
+    \quad|\quad
+    \href{https://github.com/MarcelAssie/}{GitHub} \\[0.15cm]
+    \href{https://marcel-assie-portefolio.dev}{marcel-assie-portefolio.dev}
+    \quad|\quad
+    Champs-sur-Marne (77), France
 \end{center}
 
 \vspace{0.3cm}
