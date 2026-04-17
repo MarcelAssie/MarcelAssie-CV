@@ -1,7 +1,7 @@
 ## CV Marcel Assie
 
 
-Ce CV reflète mon parcours d'ingénieur géomaticien spécialisé en geo data science. Il met en lumière mes expériences chez ISOGEO et ORYJIN, où j'ai développé des compétences concrètes en développement géospatial, automatisation de pipelines de données et analyse spatiale, au service de projets à fort impact territorial.
+Ce CV reflète mon parcours d'ingénieur géomaticien spécialisé en geo data science. Il met en lumière mes expériences chez ISOGEO, ORYJIN et au sein de l'IGN, où j'ai développé des compétences concrètes en développement géospatial, automatisation de pipelines de données et analyse spatiale, au service de projets à fort impact territorial.
 
 ## Screenshots
 
