@@ -5,8 +5,19 @@ Ce CV présente le parcours professionnel et académique de Marcel Assie, ingén
 
 # Screenshots
 ---
-![CV Page 1](screenshots/cv_page1.png)
-![CV Page 2](screenshots/cv_page2.png)
+
+<table>
+  <tr>
+    <td style="text-align: center;">
+      <img src="screenshots/cv_page1.png" alt="CV Page 1" width="400"/>
+      <br><em>Page 1</em>
+    </td>
+    <td style="text-align: center;">
+      <img src="screenshots/cv_page2.png" alt="CV Page 2" width="400"/>
+      <br><em>Page 2</em>
+    </td>
+  </tr>
+</table>
 
 
 ## Auteur
