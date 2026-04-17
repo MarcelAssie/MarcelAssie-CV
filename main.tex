@@ -17,42 +17,37 @@
 % --- Configuration des couleurs et liens ---
 \definecolor{linkcolor}{rgb}{0.0, 0.0, 0.5} % Bleu sombre et pro pour les liens
 \hypersetup{
-    colorlinks=true,
-    linkcolor=linkcolor,
-    urlcolor=linkcolor
+    colorlinks=false,
+    hidelinks
 }
+
 
 % --- Configuration des titres de sections ---
 \titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{12pt}{6pt}
 
-% --- Commandes personnalisées pour le CV ---
-% Commande pour une entrée classique (Expérience / Formation)
+
+
 \newcommand{\cventry}[4]{
-    \vspace{0.2cm}
+    \vspace{0.1cm}
     \noindent \textbf{#1} \hfill #2 \\
     \noindent \textit{#3} \hfill \textit{#4} \par
-    \vspace{0.12cm}
+    \vspace{0.05cm}
 }
 
-% Redéfinition globale des listes pour utiliser des points au lieu de tirets
+
 \setlist[itemize]{label=\textbullet}
 
 \begin{document}
 \pagestyle{empty} % Pas de numéro de page
 
 % ================= EN-TÊTE =================
-% Dans le préambule, change hypersetup pour supprimer les couleurs :
-\hypersetup{
-    colorlinks=false,
-    hidelinks
-}
 
-% En-tête :
+
 \begin{center}
     {\Huge \textbf{Marcel ASSIE}} \\[0.2cm]
     {\Large \textsc{Ingénieur en Géomatique}} \\[0.3cm]
-    \small
+    \footnotesize
     \faMobile~+33 7 68 06 25 78
     ~$|$~
     \faEnvelope~\href{mailto:marcelassie2k@gmail.com}{marcelassie2k@gmail.com}
@@ -63,12 +58,11 @@
     ~$|$~
     \faGlobe~\href{https://marcel-assie-portefolio.dev}{Portfolio}
     ~$|$~
-    \faMapMarker~Champs-sur-Marne (77), France
+    \faMapMarker~Champs-sur-Marne (77)
 \end{center}
+
 \vspace{0.3cm}
-\noindent Ingénieur en Géomatique passionné par l'écosystème Geo-Data et l'Intelligence Artificielle, je recherche un \textbf{CDI} pour concevoir des solutions géospatiales innovantes. Fort d’une solide expertise technique en \textbf{développement}, \textbf{automatisation de pipelines de données} et \textbf{analyse spatiale}, j'ai à cœur de transformer vos données territoriales complexes en véritables outils décisionnels à fort impact.
-\vspace{0.2cm}
-% ================= FORMATIONS =================
+\noindent Ingénieur géomaticien spécialisé en geo data science, passionné par l'écosystème Geo-Data et les technologies géospatiales. À la recherche d'une opportunité en \textbf{CDI} pour mettre à profit mes compétences en \textbf{développement géospatial}, \textbf{automatisation de pipelines de données} et \textbf{analyse spatiale}, au service de projets à fort impact permettant de transformer des données territoriales complexes en véritables outils décisionnels.% ================= FORMATIONS =================
 \section*{Formations}
 
 \cventry{École Nationale des Sciences Géographiques (Geodata Paris)}{Champs-sur-Marne, France}{Ingénierie Géomatique}{Sept. 2023 -- Sept. 2026}
@@ -80,13 +74,13 @@
 
 \cventry{ISOGEO}{Paris, France}{Ingénieur Développeur SIG -- Alternance}{Sept. 2025 -- Sept. 2026}
 \begin{itemize}[leftmargin=0.5cm, nosep]
-    \item Contribution à la refonte technologique du "Scan Isogeo" en remplaçant l'ETL FME par de nouvelles chaînes de traitements automatisées (Node.js, Python).
-    \item Manipulation et traitement d'une grande variété de formats de données géographiques (vecteur, raster, bases de données) avec GDAL, SQL et ESRI.
+    \item Refonte technologique du "Scan Isogeo" en remplaçant l'ETL FME par de nouvelles chaînes de traitements automatisées.
+    \item Manipulation et traitement d'une grande variété de formats de données géographiques (vecteur, raster, bases de données) avec GDAL et SQL.
     \item Exploration et implémentation de modèles d'IA pour extraire automatiquement et enrichir les métadonnées sémantiques.
     \item Rédaction de spécifications fonctionnelles et techniques, et suivi du projet au sein d'une équipe fonctionnant en méthode Agile.
 \end{itemize}
 
-\cventry{ORYJIN}{Lille, France}{Ingénieur Geo Data Scientist -- Stage}{Avril 2025 -- Août 2025}
+\cventry{ORYJIN}{Lille, France}{Ingénieur Geo Data Scientist -- Stage}{Avr. -- Août 2025}
 \begin{itemize}[leftmargin=0.5cm, nosep]
     \item Recherche, audit qualité et intégration de diverses sources de données géospatiales et socio-démographiques (Insee, IGN) dans le référentiel mondial open source H3.
     \item Développement de pipelines ETL et mise au point d'algorithmes statistiques pour calculer des agrégats géographiques (Python, Snowflake, SQL).
@@ -94,7 +88,7 @@
     \item Automatisation de la datavisualisation via l'IA générative : création de modèles descriptifs et de flux de prompts pour générer des images réalistes décrivant des territoires.
 \end{itemize}
 
-\cventry{IGN}{Forcalquier, France}{Ingénieur Géomaticien -- Stage}{Mai 2024 -- Juillet 2024}
+\cventry{IGN}{Forcalquier, France}{Ingénieur Géomaticien -- Stage}{Mai -- Juil. 2024}
 \begin{itemize}[leftmargin=0.5cm, nosep]
     \item Mini projets appliqués en topométrie, photogrammétrie, métrologie (auscultation de pont), télédétection et géodésie, avec formalisation méthodologique et analyse des incertitudes.
     \item Conception d’un workflow automatisé de cartographie des restrictions de circulation (Alpes-de-Haute-Provence) :
@@ -118,10 +112,9 @@
 
 \noindent \textbf{Projets Académiques}
 \begin{itemize}[leftmargin=0.5cm, nosep]
-    \item \textbf{Extraction de données contextuelles (ODD)} : Développement d'une méthode avancée d'extraction basée sur les Grands Modèles de Langage (LLM) et structuration sous forme de graphes de connaissances pour analyser les relations entre les ODD (Python, NLP, LLMs, Neo4j).
+    \item \textbf{Extraction de données contextuelles (ODD)} : Développement d'une méthode avancée d'extraction basée sur les Grands Modèles de Langage (LLM) et structuration sous forme de graphes de connaissances pour analyser les relations entre les ODD (Pytorch, Transformers, NLP, LLMs, Neo4j).
     \item \textbf{App mobile de navigation (Gendarmerie Nationale)} : Développement d'une application inspirée de Waze, spécifiquement adaptée aux missions de sécurité publique (React Native, Flask).
-    \item \textbf{Étude Spatio-Statistique (Île-de-France)} : Analyse des flux domicile-travail et déterminants du choix modal (Statistiques, Machine Learning, Analyse spatiale).
-\end{itemize}
+\item \textbf{Étude Spatio-Statistique (Île-de-France)} : Modélisation de l'impact des modifications du réseau de transport sur le report modal domicile-travail via une approche panel spatio-temporelle et simulation de scénarios prospectifs (Sckit-Learn, Seaborn, SciPy, Proj, Geopandas).\end{itemize}
 
 \vspace{0.2cm}
 \noindent \textbf{Projets Personnels}
