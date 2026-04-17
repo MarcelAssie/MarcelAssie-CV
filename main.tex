@@ -1,0 +1,158 @@
+\documentclass[11pt, a4paper]{article}
+
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[french]{babel}
+\usepackage[left=1.5cm, right=1.5cm, top=1.5cm, bottom=1.5cm]{geometry}
+\usepackage{hyperref}     % Pour les liens cliquables
+\usepackage{titlesec}     % Pour personnaliser les titres de section
+\usepackage{enumitem}     % Pour personnaliser les listes
+\usepackage{parskip}      % Pour espacer les paragraphes
+\usepackage{xcolor}
+\usepackage{fontawesome}
+
+
+% --- Configuration des couleurs et liens ---
+\definecolor{linkcolor}{rgb}{0.0, 0.0, 0.5} % Bleu sombre et pro pour les liens
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor
+}
+
+% --- Configuration des titres de sections ---
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{12pt}{6pt}
+
+% --- Commandes personnalisées pour le CV ---
+% Commande pour une entrée classique (Expérience / Formation)
+\newcommand{\cventry}[4]{
+    \vspace{0.2cm}
+    \noindent \textbf{#1} \hfill #2 \\
+    \noindent \textit{#3} \hfill \textit{#4} \par
+    \vspace{0.12cm}
+}
+
+% Redéfinition globale des listes pour utiliser des points au lieu de tirets
+\setlist[itemize]{label=\textbullet}
+
+\begin{document}
+\pagestyle{empty} % Pas de numéro de page
+
+% ================= EN-TÊTE =================
+% Dans le préambule, change hypersetup pour supprimer les couleurs :
+\hypersetup{
+    colorlinks=false,
+    hidelinks
+}
+
+% En-tête :
+\begin{center}
+    {\Huge \textbf{Marcel ASSIE}} \\[0.2cm]
+    {\Large \textsc{Ingénieur en Géomatique}} \\[0.3cm]
+    \small
+    \faMobile~+33 7 68 06 25 78
+    ~$|$~
+    \faEnvelope~\href{mailto:marcelassie2k@gmail.com}{marcelassie2k@gmail.com}
+    ~$|$~
+    \faLinkedinSquare~\href{https://www.linkedin.com/in/marcel-assie/}{LinkedIn}
+    ~$|$~
+    \faGithub~\href{https://github.com/MarcelAssie/}{GitHub}
+    ~$|$~
+    \faGlobe~\href{https://marcel-assie-portefolio.dev}{Portfolio}
+    ~$|$~
+    \faMapMarker~Champs-sur-Marne (77), France
+\end{center}
+\vspace{0.3cm}
+\noindent Ingénieur en Géomatique passionné par l'écosystème Geo-Data et l'Intelligence Artificielle, je recherche un \textbf{CDI} pour concevoir des solutions géospatiales innovantes. Fort d’une solide expertise technique en \textbf{développement}, \textbf{automatisation de pipelines de données} et \textbf{analyse spatiale}, j'ai à cœur de transformer vos données territoriales complexes en véritables outils décisionnels à fort impact.
+\vspace{0.2cm}
+% ================= FORMATIONS =================
+\section*{Formations}
+
+\cventry{École Nationale des Sciences Géographiques (Geodata Paris)}{Champs-sur-Marne, France}{Ingénierie Géomatique}{Sept. 2023 -- Sept. 2026}
+\cventry{Institut National Polytechnique Félix Houphouët-Boigny}{Yamoussoukro, Côte d'Ivoire}{Licence Géomètre}{Oct. 2019 -- Juil. 2022}
+\cventry{Lycée Scientifique de Yamoussoukro}{Yamoussoukro, Côte d'Ivoire}{Baccalauréat, Série Scientifique}{Sept. 2016 -- Juil. 2019}
+
+% ================= EXPÉRIENCES PROFESSIONNELLES =================
+\section*{Expériences Professionnelles}
+
+\cventry{ISOGEO}{Paris, France}{Ingénieur Développeur SIG -- Alternance}{Sept. 2025 -- Sept. 2026}
+\begin{itemize}[leftmargin=0.5cm, nosep]
+    \item Contribution à la refonte technologique du "Scan Isogeo" en remplaçant l'ETL FME par de nouvelles chaînes de traitements automatisées (Node.js, Python).
+    \item Manipulation et traitement d'une grande variété de formats de données géographiques (vecteur, raster, bases de données) avec GDAL, SQL et ESRI.
+    \item Exploration et implémentation de modèles d'IA pour extraire automatiquement et enrichir les métadonnées sémantiques.
+    \item Rédaction de spécifications fonctionnelles et techniques, et suivi du projet au sein d'une équipe fonctionnant en méthode Agile.
+\end{itemize}
+
+\cventry{ORYJIN}{Lille, France}{Ingénieur Geo Data Scientist -- Stage}{Avril 2025 -- Août 2025}
+\begin{itemize}[leftmargin=0.5cm, nosep]
+    \item Recherche, audit qualité et intégration de diverses sources de données géospatiales et socio-démographiques (Insee, IGN) dans le référentiel mondial open source H3.
+    \item Développement de pipelines ETL et mise au point d'algorithmes statistiques pour calculer des agrégats géographiques (Python, Snowflake, SQL).
+    \item Extraction d'informations spatiales (zones d'habitation, infrastructures) à partir d'images satellites à l'aide de modèles d'IA de Computer Vision.
+    \item Automatisation de la datavisualisation via l'IA générative : création de modèles descriptifs et de flux de prompts pour générer des images réalistes décrivant des territoires.
+\end{itemize}
+
+\cventry{IGN}{Forcalquier, France}{Ingénieur Géomaticien -- Stage}{Mai 2024 -- Juillet 2024}
+\begin{itemize}[leftmargin=0.5cm, nosep]
+    \item Mini projets appliqués en topométrie, photogrammétrie, métrologie (auscultation de pont), télédétection et géodésie, avec formalisation méthodologique et analyse des incertitudes.
+    \item Conception d’un workflow automatisé de cartographie des restrictions de circulation (Alpes-de-Haute-Provence) :
+    \begin{itemize}[leftmargin=0.5cm, nosep]
+        \item Structuration et nettoyage de jeux de données multi-sources.
+        \item Modélisation des traitements géospatiaux (QGIS Model Builder).
+        \item Développement d’algorithmes de contrôle qualité et de validation des données.
+    \end{itemize}
+\end{itemize}
+
+% ================= COMPÉTENCES =================
+\section*{Compétences}
+\noindent \textbf{Informatique / Programmation :} Python, SQL, JavaScript, HTML/CSS, R, Cypher \\
+\textbf{Techno \& Outils :} Docker, GitHub, PostgreSQL, PostGIS, Django, Flask, Vue.js, React Native, Neo4j \\
+\textbf{Librairies :} GDAL, Proj, GeoPandas, ArcPy, PyQGIS, Shapely, Leaflet \\
+\textbf{Outils SIG :} QGIS, ArcGIS Pro, FME, GeoServer \\
+\textbf{Aptitudes professionnelles :} Forte capacité d’adaptation, Rigueur, Esprit critique et d'analyse, Prise d’initiative
+
+% ================= PROJETS =================
+\section*{Projets}
+
+\noindent \textbf{Projets Académiques}
+\begin{itemize}[leftmargin=0.5cm, nosep]
+    \item \textbf{Extraction de données contextuelles (ODD)} : Développement d'une méthode avancée d'extraction basée sur les Grands Modèles de Langage (LLM) et structuration sous forme de graphes de connaissances pour analyser les relations entre les ODD (Python, NLP, LLMs, Neo4j).
+    \item \textbf{App mobile de navigation (Gendarmerie Nationale)} : Développement d'une application inspirée de Waze, spécifiquement adaptée aux missions de sécurité publique (React Native, Flask).
+    \item \textbf{Étude Spatio-Statistique (Île-de-France)} : Analyse des flux domicile-travail et déterminants du choix modal (Statistiques, Machine Learning, Analyse spatiale).
+\end{itemize}
+
+\vspace{0.2cm}
+\noindent \textbf{Projets Personnels}
+\begin{itemize}[leftmargin=0.5cm, nosep]
+    \item \textbf{Plateforme SaaS KlassIvoire} :
+    \begin{itemize}[leftmargin=0.5cm, nosep]
+        \item Contribution au développement pour le suivi scolaire numérique, avec intégration d’outils d'IA pour l'analyse des performances.
+        \item Techno : Django, SQL, PostgreSQL, Docker, Cloudflare R2, Redis, Gemini API.
+    \end{itemize}
+    \item \textbf{Plateforme d'analyse d'établissements scolaires} :
+    \begin{itemize}[leftmargin=0.5cm, nosep]
+        \item Conception d’une plateforme intelligente de suivi géographique permettant l’exploitation de données spatiales pour la prise de décision.
+        \item Techno : Django, SQL, Leaflet.js.
+    \end{itemize}
+\end{itemize}
+
+% ================= VIE ASSOCIATIVE =================
+\section*{Vie Associative}
+
+\cventry{VERTIGEO -- Junior Entreprise de l'ENSG Géomatique}{Champs-sur-Marne}{Secrétaire Général}{Fév. 2024 -- Mars 2025}
+\noindent Comptes rendus, archivage, gestion des relations avec les partenaires administratifs, organisation de réunions.
+
+\cventry{Professeur particulier}{Île-de-France}{Cours à domicile -- Mathématiques et Physique}{Depuis Oct. 2023}
+\noindent Pédagogie et méthodologie, écoute attentive des besoins des élèves.
+
+\cventry{Épicerie solidaire campésienne}{Champs-sur-Marne}{Bénévole}{Fév. 2024}
+\noindent Collecte de produits alimentaires et d'hygiène à Carrefour. Promotion de l'échange et de l'ouverture d'esprit.
+
+% ================= LANGUES ET INTÉRÊTS =================
+\section*{Langues et Centres d'intérêt}
+\noindent \textbf{Langues :} Français (Langue maternelle), Anglais (TOEIC - B2) \\[0.1cm]
+\textbf{Centres d'intérêt :} Intelligence Artificielle, Veille technologique, Football, Gymnastique acrobatique, Jeux de société
+
+\end{document}
