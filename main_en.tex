@@ -1,0 +1,162 @@
+\documentclass[11pt, a4paper]{article}
+
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage[left=1.5cm, right=1.5cm, top=1.5cm, bottom=1.5cm]{geometry}
+\usepackage{hyperref}     % For clickable links
+\usepackage{titlesec}     % To customize section titles
+\usepackage{enumitem}     % To customize lists
+\usepackage{parskip}      % To space paragraphs
+\usepackage{xcolor}
+\usepackage{fontawesome}
+
+
+% --- Color and link configuration ---
+\definecolor{linkcolor}{rgb}{0.0, 0.0, 0.5} % Dark and professional blue for links
+\hypersetup{
+    colorlinks=false,
+    hidelinks
+}
+
+
+% --- Section title configuration ---
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{12pt}{6pt}
+
+
+
+\newcommand{\cventry}[4]{
+    \vspace{0.1cm}
+    \noindent \textbf{#1} \hfill #2 \\
+    \noindent \textit{#3} \hfill \textit{#4} \par
+    \vspace{0.05cm}
+}
+
+
+\setlist[itemize]{label=\textbullet}
+
+\begin{document}
+\pagestyle{empty} % No page numbers
+
+% ================= HEADER =================
+
+
+\begin{center}
+    {\Huge \textbf{Marcel ASSIE}} \\[0.2cm]
+    {\Large \textsc{Geomatics Engineer}} \\[0.3cm]
+    \footnotesize
+    \faMobile~+33 7 68 06 25 78
+    ~$|$~
+    \faEnvelope~\href{mailto:marcelassie2k@gmail.com}{marcelassie2k@gmail.com}
+    ~$|$~
+    \faLinkedinSquare~\href{https://www.linkedin.com/in/marcel-assie/}{LinkedIn}
+    ~$|$~
+    \faGithub~\href{https://github.com/MarcelAssie/}{GitHub}
+    ~$|$~
+    \faGlobe~\href{https://marcel-assie-portefolio.dev}{Portfolio}
+    ~$|$~
+    \faMapMarker~Champs-sur-Marne (77)
+\end{center}
+
+\vspace{0.3cm}
+\noindent Geomatics engineering student specializing in spatial data science, passionate about the Geo-Data ecosystem and geospatial technologies. Seeking a \textbf{permanent full-time position} to leverage my skills in \textbf{geospatial software development}, \textbf{data pipeline automation}, and \textbf{spatial analysis}, serving high-impact projects that transform complex territorial data into effective decision-making tools.
+
+% ================= EDUCATION =================
+\section*{Education}
+
+\cventry{École Nationale des Sciences Géographiques (Geodata Paris)}{Champs-sur-Marne, France}{Geomatics Engineering Degree \textbullet\ Spatial Data Science Specialization}{Sept. 2023 -- Sept. 2026}
+\cventry{Institut National Polytechnique Félix Houphouët-Boigny}{Yamoussoukro, Ivory Coast}{Bachelor's Degree in Surveying}{Oct. 2019 -- Jul. 2022}
+\cventry{Lycée Scientifique de Yamoussoukro}{Yamoussoukro, Ivory Coast}{French Baccalauréat (Scientific Stream)}{Sept. 2016 -- Jul. 2019}
+
+% ================= PROFESSIONAL EXPERIENCE =================
+\section*{Professional Experience}
+
+\cventry{ISOGEO}{Paris, France}{GIS Developer -- Apprenticeship}{Sept. 2025 -- Sept. 2026}
+\begin{itemize}[leftmargin=0.5cm, nosep]
+    \item Led the technological overhaul of "Scan Isogeo" by replacing the FME ETL with new automated processing pipelines.
+    \item Manipulated and processed a wide variety of geographic data formats (vector, raster, databases) using GDAL and SQL.
+    \item Explored and implemented AI models to automatically extract and enrich semantic metadata.
+    \item Drafted functional and technical specifications, and contributed to project management within an Agile team.
+\end{itemize}
+
+\cventry{ORYJIN}{Lille, France}{Geospatial Data Scientist -- Internship}{Apr. -- Aug. 2025}
+\begin{itemize}[leftmargin=0.5cm, nosep]
+    \item Researched, audited, and integrated various geospatial and socio-demographic data sources (INSEE, IGN) into the open-source H3 global grid system.
+    \item Developed ETL pipelines and implemented statistical algorithms to calculate geographic aggregates (Python, Snowflake, SQL).
+    \item Extracted spatial information (housing areas, infrastructure) from satellite imagery using Computer Vision AI models.
+    \item Automated data visualization via generative AI: created descriptive models and prompt workflows to generate realistic images describing territories.
+\end{itemize}
+
+\cventry{IGN (National Institute of Geographic and Forest Information)}{Forcalquier, France}{Geomatics Engineer -- Internship}{May -- Jul. 2024}
+\begin{itemize}[leftmargin=0.5cm, nosep]
+    \item Conducted applied mini-projects in surveying, photogrammetry, metrology (bridge monitoring), remote sensing, and geodesy, including methodological formalization and uncertainty analysis.
+    \item Designed an automated workflow for mapping traffic restrictions (Alpes-de-Haute-Provence):
+    \begin{itemize}[leftmargin=0.5cm, nosep]
+        \item Structured and cleaned multi-source datasets.
+        \item Modeled geospatial processes (QGIS Model Builder).
+        \item Developed quality control and data validation algorithms.
+    \end{itemize}
+\end{itemize}
+
+% ================= SKILLS =================
+\section*{Skills}
+\noindent \textbf{Programming Languages:} Python, SQL, JavaScript, HTML/CSS, R, Cypher \\
+\textbf{Technologies \& Frameworks:} Docker, GitHub, PostgreSQL/PostGIS, Django, Flask, Vue.js, React Native, Neo4j \\
+\textbf{Libraries:} GDAL, Proj, GeoPandas, ArcPy, PyQGIS, Shapely, Leaflet.js \\
+\textbf{GIS Software:} QGIS, ArcGIS Pro, FME, GeoServer, AutoCAD \\
+\textbf{Soft Skills:} High adaptability, Rigor, Critical and analytical thinking, Proactive
+
+% ================= PROJECTS =================
+\section*{Projects}
+
+\begin{itemize}[leftmargin=0.5cm, nosep]
+    \item \textbf{Contextual Data Extraction (SDGs):}
+    \begin{itemize}[leftmargin=0.5cm, nosep]
+        \item Developed an advanced extraction method based on Large Language Models (LLMs) and structured it into knowledge graphs to analyze relationships between Sustainable Development Goals (PyTorch, Transformers, NLP, LLMs, Neo4j).
+    \end{itemize}
+    \vspace{0.2cm}
+    \item \textbf{Mobile Navigation App (French National Gendarmerie):}
+    \begin{itemize}[leftmargin=0.5cm, nosep]
+        \item Developed a Waze-inspired application specifically tailored for public security missions (React Native, Flask).
+    \end{itemize}
+    \vspace{0.2cm}
+    \item \textbf{Spatial Statistics Study (Île-de-France):}
+    \begin{itemize}[leftmargin=0.5cm, nosep]
+        \item Modeled the impact of transport network changes on commuting modal shifts through a spatio-temporal panel approach and prospective scenario simulation (Scikit-Learn, Seaborn, SciPy, Proj, GeoPandas).
+    \end{itemize}
+    \vspace{0.2cm}
+    \item \textbf{KlassIvoire SaaS Platform:}
+    \begin{itemize}[leftmargin=0.5cm, nosep]
+        \item Contributed to the development of a digital school monitoring platform, integrating AI tools for performance analysis.
+        \item Technologies: Django, SQL, PostgreSQL, Docker, Cloudflare R2, Redis, Gemini API.
+    \end{itemize}
+    \vspace{0.2cm}
+    \item \textbf{Educational Institution Analysis Platform:}
+    \begin{itemize}[leftmargin=0.5cm, nosep]
+        \item Designed an intelligent geographic monitoring platform to leverage spatial data for decision-making.
+        \item Technologies: Django, PostgreSQL/PostGIS, Leaflet.js.
+    \end{itemize}
+\end{itemize}
+
+
+% ================= EXTRACURRICULAR =================
+\section*{Extracurricular Activities \& Volunteering}
+
+\cventry{Private Tutor}{Île-de-France}{In-home Tutoring -- Mathematics and Physics}{Since Oct. 2023}
+\noindent Provided tailored pedagogy and methodology, highly attentive to students' needs.
+
+\cventry{VERTIGEO -- ENSG Geomatics Junior Enterprise}{Champs-sur-Marne}{General Secretary}{Feb. 2024 -- Mar. 2025}
+\noindent Drafted meeting minutes, managed archives and administrative partnerships, and organized meetings.
+
+\cventry{Épicerie Solidaire Campésienne (Solidarity Grocery)}{Champs-sur-Marne}{Volunteer}{Feb. 2024}
+\noindent Collected food and hygiene products at a Carrefour store. Promoted community exchange and open-mindedness.
+
+% ================= LANGUAGES AND INTERESTS =================
+\section*{Languages \& Interests}
+\noindent \textbf{Languages:} French (Native), English (Professional Working Proficiency - TOEIC B2) \\[0.1cm]
+\textbf{Interests:} Artificial Intelligence, Tech Watch, Soccer, Acrobatic Gymnastics, Board Games
+
+\end{document}
